@@ -2,6 +2,8 @@
 
 SecurePassGen is an advanced, responsive web application for generating strong, unique passwords using user email input. Built with HTML, Bootstrap 5, CSS, and JavaScript, it features a sleek UI, GSAP/AOS animations, lazy loading, dark mode, and sections like hero, about, features, reviews, articles, and contact. Optimized for performance, accessibility, and SEO.
 
+![](images/screenshot.jpeg)
+
 ## Features
 - Generate 12-character passwords with mixed case, numbers, and special characters.
 - Copy, regenerate, and view password strength.
