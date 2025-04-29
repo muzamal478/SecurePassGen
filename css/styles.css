@@ -1,0 +1,136 @@
+:root {
+    --primary: #1E3A8A;
+    --secondary: #3B82F6;
+    --accent: #10B981;
+    --background: #F3F4F6;
+    --text: #111827;
+    --dark-bg: #111827;
+    --dark-text: #F3F4F6;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar {
+    background-color: var(--background);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary) !important;
+  }
+  
+  .nav-link {
+    color: var(--text) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary) !important;
+  }
+  
+  .hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') no-repeat center/cover;
+    background-attachment: fixed;
+  }
+  
+  .btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .card {
+    background-color: var(--card-bg, #fff);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .lazy-load {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .lazy-load.loaded {
+    opacity: 1;
+  }
+  
+  #passwordStrength {
+    height: 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #passwordStrength.weak {
+    background-color: #EF4444;
+  }
+  
+  #passwordStrength.medium {
+    background-color: #FBBF24;
+  }
+  
+  #passwordStrength.strong {
+    background-color: var(--accent);
+  }
+  
+  footer {
+    background-color: var(--primary);
+  }
+  
+  footer a:hover {
+    color: var(--secondary) !important;
+  }
+  
+  section {
+    padding: 80px 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .footer-text {
+    color: white;
+  }
+  
+  p {
+    color: var(--text);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      height: 70vh;
+    }
+  
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    section {
+      padding: 50px 0;
+    }
+  }

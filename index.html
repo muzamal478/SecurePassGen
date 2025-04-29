@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SecurePassGen: Generate strong, unique passwords instantly using your email. Modern, responsive, and secure.">
+  <meta name="keywords" content="password generator, secure password, cybersecurity, web app">
+  <meta property="og:title" content="SecurePassGen - Strong Password Generator">
+  <meta property="og:description" content="Create unique, secure passwords for any platform with SecurePassGen.">
+  <meta property="og:image" content="images/hero-bg.jpg">
+  <meta property="og:url" content="https://muzamal478.github.io/SecurePassGen">
+  <title>SecurePassGen - Strong Password Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">SecurePassGen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how-to-use">How to Use</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn-outline-secondary ms-3" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <a href="#generator" class="btn btn-primary ms-3">Try Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center d-flex align-items-center" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('images/hero-bg.jpg') no-repeat center/cover;height: 100vh;">
+    <div class="container">
+      <h1 class="display-3 fw-bold" data-aos="fade-up" style="color: white;">Secure Passwords, Made Simple</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="100" style="color: white;">Generate strong, unique passwords with a single click.</p>
+      <a href="#generator" class="btn btn-primary btn-lg mt-3" data-aos="fade-up" data-aos-delay="200">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Password Generator Section -->
+  <section id="generator" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Password Generator</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow-sm p-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Enter Your Email</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="example@domain.com" aria-describedby="emailHelp" required>
+              <div id="emailHelp" class="form-text">We'll use your email to create a unique password.</div>
+            </div>
+            <button class="btn btn-primary w-100 mb-3" onclick="generatePassword()">Generate Password</button>
+            <div class="mb-3">
+              <label for="passwordOutput" class="form-label">Generated Password</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="passwordOutput" readonly aria-describedby="passwordStrength">
+                <button class="btn btn-outline-secondary" onclick="copyPassword()" aria-label="Copy password">Copy</button>
+              </div>
+              <div id="passwordStrength" class="form-text mt-2"></div>
+            </div>
+            <button class="btn btn-secondary w-100" onclick="generatePassword()">Regenerate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h2>About SecurePassGen</h2>
+          <p>SecurePassGen is your go-to tool for creating strong, unique passwords tailored to your email. Protect your online accounts with ease and confidence.</p>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <img src="images/about-us.jpg" alt="About SecurePassGen" class="img-fluid rounded lazy-load" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Our Features</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card text-center h-100">
+            <img src="images/feature-icon1.png" alt="Secure" class="card-img-top mx-auto mt-3 lazy-load" style="width: 60px;" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title" style="color:#1E3A8A;">Maximum Security</h5>
+              <p class="card-text">Passwords meet top industry standards.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card text-center h-100">
+            <img src="images/feature-icon2.png" alt="Fast" class="card-img-top mx-auto mt-3 lazy-load" style="width: 60px;" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title" style="color:#1E3A8A;" >Blazing Fast</h5>
+              <p class="card-text">Generate passwords in milliseconds.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card text-center h-100">
+            <img src="images/feature-icon3.png" alt="Easy" class="card-img-top mx-auto mt-3 lazy-load" style="width: 60px;" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title" style="color:#1E3A8A;">Effortless Use</h5>
+              <p class="card-text">Intuitive interface for all users.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card text-center h-100">
+            <img src="images/feature-icon4.png" alt="Unique" class="card-img-top mx-auto mt-3 lazy-load" style="width: 60px;" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title" style="color:#1E3A8A;">Unique Passwords</h5>
+              <p class="card-text">Tailored to your email for uniqueness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Use Section -->
+  <section id="how-to-use" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">How It Works</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <i class="bi bi-envelope-fill display-4 text-primary mb-3"></i>
+          <h4>Step 1: Enter Email</h4>
+          <p>Provide your email address to start.</p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-shield-lock-fill display-4 text-primary mb-3"></i>
+          <h4>Step 2: Generate</h4>
+          <p>Click to create a secure password.</p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-clipboard-check-fill display-4 text-primary mb-3"></i>
+          <h4>Step 3: Copy & Use</h4>
+          <p>Copy the password for your account.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Reviews Section -->
+  <section id="reviews" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">User Testimonials</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card text-center">
+            <img src="images/review-avatar1.jpg" alt="User 1" class="rounded-circle mx-auto mt-3 lazy-load" style="width: 80px;" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Ayesha M.</h5>
+              <p class="card-text">"Incredibly easy to use and generates super secure passwords!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card text-center">
+            <img src="images/review-avatar2.jpg" alt="User 2" class="rounded-circle mx-auto mt-3 lazy-load" style="width: 80px;" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Ali R.</h5>
+              <p class="card-text">"Fast and reliable. The dark mode is a great touch!"</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card text-center">
+            <img src="images/review-avatar3.jpg" alt="User 3" class="rounded-circle mx-auto mt-3 lazy-load" style="width: 80px;" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Zara K.</h5>
+              <p class="card-text">"Perfect for creating passwords for all my accounts."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section id="articles" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Stay Secure</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card">
+            <img src="images/article1.jpg" alt="Article 1" class="card-img-top lazy-load" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">The Importance of Strong Passwords</h5>
+              <p class="card-text">Why complex passwords are your first line of defense.</p>
+              <a href="#" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <img src="images/article2.jpg" alt="Article 2" class="card-img-top lazy-load" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Common Password Pitfalls</h5>
+              <p class="card-text">Mistakes to avoid when creating passwords.</p>
+              <a href="#" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card">
+            <img src="images/article3.jpg" alt="Article 3" class="card-img-top lazy-load" loading="lazy">
+            <div class="card-body">
+              <h5 class="card-title">Protecting Against Phishing</h5>
+              <p class="card-text">Tips to stay safe from online scams.</p>
+              <a href="#" class="btn btn-outline-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow-sm p-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-3">
+              <label for="contactName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="contactName" placeholder="Your Name" aria-required="true">
+            </div>
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" placeholder="Your Email" aria-required="true">
+            </div>
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="contactMessage" rows="5" placeholder="Your Message" aria-required="true"></textarea>
+            </div>
+            <button class="btn btn-primary w-100" onclick="submitContact()">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="footer-text">SecurePassGen</h5>
+          <p style="color: white;">Your trusted tool for secure password generation.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-text">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+            <li><a href="#features" class="text-white text-decoration-none">Features</a></li>
+            <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-text">Follow Us</h5>
+          <a href="#" class="text-white me-2" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-4 text-white">
+        <p style="color: white;">© 2025 SecurePassGen. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
