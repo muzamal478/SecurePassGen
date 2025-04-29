@@ -15,7 +15,7 @@ SecurePassGen is an advanced, responsive web application for generating strong, 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/SecurePassGen.git
+   git clone https://github.com/muzamal478/SecurePassGen.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -72,7 +72,7 @@ To deploy on GitHub Pages:
 1. Push the project to your repository.
 2. Go to Settings > Pages.
 3. Select the `main` branch and save.
-4. Access the site at `https://your-username.github.io/SecurePassGen`.
+4. Access the site at `https://muzamal478.github.io/SecurePassGen`.
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
