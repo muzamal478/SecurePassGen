@@ -73,6 +73,7 @@ To deploy on GitHub Pages:
 2. Go to Settings > Pages.
 3. Select the `main` branch and save.
 4. Access the site at `https://muzamal478.github.io/SecurePassGen`.
+5. The website is live on GitHub Pages: [View Live Demo](https://muzamal478.github.io/SecurePassGen/)
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
